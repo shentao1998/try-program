@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择你的命运</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 30px;
+    }
+    .result img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>选择你的命运</h1>
+  <button class="button" onclick="showResult('brawl')">大乱斗</button>
+  <button class="button" onclick="showResult('trash')">捡垃圾</button>
+
+  <div class="result" id="result">
+    <!-- 结果图片将显示在这里 -->
+  </div>
+
+  <script>
+    function showResult(choice) {
+      const resultDiv = document.getElementById('result');
+      let imageUrl = '';
+
+      if (choice === 'brawl') {
+        imageUrl = 'https://via.placeholder.com/400x300?text=赫卡里姆'; // 替换为赫卡里姆图片的实际URL
+      } else if (choice === 'trash') {
+        imageUrl = 'https://via.placeholder.com/400x300?text=S.B.'; // 替换为“S.B.”图片的实际URL
+      }
+
+      resultDiv.innerHTML = `<img src="${imageUrl}" alt="结果图片">`;
+    }
+  </script>
+</body>
+</html>
